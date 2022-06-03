@@ -972,3 +972,23 @@ SELECT client_name
 FROM client;
 ```
 
+```sql
+-- Find a list of all clients and branch suppliers's names
+
+// as both table client and branch_supplier have branch_id 
+SELECT client_name, client.branch_id
+FROM client
+UNION 
+SELECT supplier_name, branch_supplier.branch_id 
+FROM branch_supplier;
+```
+
+```sql
+-- Find a list of all money spent or earned by the company
+
+SELECT salary
+FROM employee
+UNION
+SELECT total_sales
+FROM works_with;
+```
