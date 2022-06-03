@@ -925,7 +925,7 @@ GROUP BY client_id;
 ```
 
 ```sql
--- Find any cleint's who are an LLC
+-- Find any client's who are an LLC
 SELECT *
 FROM client
 WHERE client_name LIKE '%LLC';
