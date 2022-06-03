@@ -951,3 +951,24 @@ SELECT *
 FROM employee
 WHERE birth_date LIKE '____-02';
 ```
+
+### UNION 
+
+- Union is use to join two or more commands together.
+- **Rules**
+    - You have to have same column number in each select statement
+    - They must have similar datatypes 
+
+```sql
+-- Find a list of employee, client name and branch names in single column
+
+SELECT first_name AS Company_Names
+FROM employee 
+UNION
+SELECT branch_name
+FROM branch;
+UNION 
+SELECT client_name 
+FROM client;
+```
+
