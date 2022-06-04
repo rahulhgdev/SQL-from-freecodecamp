@@ -1039,3 +1039,6 @@ FROM employee
 RIGHT JOIN branch
 ON employee.emp_id = branch_mgr_id;
 ```
+
+- **There is one more type of Join called ‘*Full Outer Join*’. But unfortunately we can not used it in MySQL**.
+- **Full Outer Join is basically combination of *Left Join*** and ***Right Join***.
