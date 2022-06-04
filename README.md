@@ -992,3 +992,11 @@ UNION
 SELECT total_sales
 FROM works_with;
 ```
+## JOINS
+
+- Join is basically use to combine rows from 2 or more table based on related columns between them.
+
+```sql
+-- To learning about we are inserting another branch into branch table
+```
+INSERT INTO branch VALUES(4, 'Buffalo', NULL, NULL);
