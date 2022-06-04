@@ -1027,3 +1027,15 @@ FROM employee
 LEFT JOIN branch
 ON employee.emp_id = branch_mgr_id;
 ```
+**Right Join
+
+```java
+-- Find all branches and the names of their managers
+
+// As emp_id and mgr_id both column are storing emp_id so we can use Join here
+
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+RIGHT JOIN branch
+ON employee.emp_id = branch_mgr_id;
+```
