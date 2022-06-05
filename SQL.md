@@ -988,3 +988,53 @@ UNION
 SELECT total_sales
 FROM works_with;
 ```
+## JOINS
+
+- Join is basically use to combine rows from 2 or more table based on related columns between them.
+
+```sql
+-- To learning about we are inserting another branch into branch table
+
+INSERT INTO branch VALUES(4, 'Buffalo', NULL, NULL);
+```
+
+**Join/ Inner Join
+
+```sql
+-- Find all branches and the names of their managers
+
+// As emp_id and mgr_id both column are storing emp_id so we can use Join here
+
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+JOIN branch
+ON employee.emp_id = branch_mgr_id;
+```
+
+**Left Join
+
+```sql
+-- Find all branches and the names of their managers
+
+// As emp_id and mgr_id both column are storing emp_id so we can use Join here
+
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+LEFT JOIN branch
+ON employee.emp_id = branch_mgr_id;
+```
+**Right Join
+
+```java
+-- Find all branches and the names of their managers
+
+// As emp_id and mgr_id both column are storing emp_id so we can use Join here
+
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+RIGHT JOIN branch
+ON employee.emp_id = branch_mgr_id;
+```
+
+- **There is one more type of Join called ‘*Full Outer Join*’. But unfortunately we can not used it in MySQL**.
+- **Full Outer Join is basically combination of *Left Join*** and ***Right Join***.
