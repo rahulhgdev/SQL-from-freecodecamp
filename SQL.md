@@ -947,3 +947,44 @@ SELECT *
 FROM employee
 WHERE client_name LIKE '%school%';
 ```
+
+### UNION 
+
+- Union is use to join two or more commands together.
+- **Rules**
+    - You have to have same column number in each select statement
+    - They must have similar datatypes 
+
+```sql
+-- Find a list of employee, client name and branch names in single column
+
+SELECT first_name AS Company_Names
+FROM employee 
+UNION
+SELECT branch_name
+FROM branch;
+UNION 
+SELECT client_name 
+FROM client;
+```
+
+```sql
+-- Find a list of all clients and branch suppliers's names
+
+// as both table client and branch_supplier have branch_id 
+SELECT client_name, client.branch_id
+FROM client
+UNION 
+SELECT supplier_name, branch_supplier.branch_id 
+FROM branch_supplier;
+```
+
+```sql
+-- Find a list of all money spent or earned by the company
+
+SELECT salary
+FROM employee
+UNION
+SELECT total_sales
+FROM works_with;
+```
