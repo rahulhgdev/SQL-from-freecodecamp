@@ -1,5 +1,5 @@
 # SQL-from-freecodecamp
-SQL tutorial for beginners from freecodecamp YT.
+SQL tutorial for beginners from freecodecamp YT(YouTube).
 
 # SQL-from-freecodecamp
 Youtube Tutorial Link(freeCodeCamp) - https://www.youtube.com/watch?v=HXV3zeQKqGY
